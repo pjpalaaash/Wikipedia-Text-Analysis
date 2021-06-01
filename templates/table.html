@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',    filename='css/style.css') }}">
+    <title>Wikipedia Analysis</title>
+</head>
+<body>
+  <h2 style="margin-top: 0.5in;">Top 10 Most Frequent Words</h2>
+<div>
+  <table style="border: 0.2in;" class="center">
+    <tr style="border-radius: 0.2in;">
+            <th>Words</th>
+            <th>Frequency</th>
+
+    </tr>            
+    {% for k, v in counts.items() %}
+            <tr>
+                    <td>{{ k }}</td>
+                    <td>{{ v }}</td>
+            </tr>
+    {% endfor %}
+    
+
+</div>    
+</table>
+<div>
+
+
+<a class="link" href="/">Go to Home Page</a>
+
+</div>
+</body>
+</html>
